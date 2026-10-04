@@ -1,0 +1,8 @@
+terse-substrate is maintained by TerseAI and is not an official Google SDK.
+
+proto/ateapi.proto is an unmodified copy of the Agent Substrate API schema.
+Copyright 2026 Google LLC.
+Licensed under the Apache License, Version 2.0; see LICENSE.
+
+The upstream source revision and file checksums are recorded in upstream.json.
+The Rust client is generated from this schema by tonic-prost-build.

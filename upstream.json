@@ -1,0 +1,9 @@
+{
+  "repository": "https://github.com/agent-substrate/substrate",
+  "revision": "23863bea16cb14df8a34deb635346d40cac38785",
+  "release": "v0.2.0-gke.0",
+  "sha256": {
+    "proto/ateapi.proto": "cde1ed893b45797c76f89da998a05fa5c6f5f578640a46e9fb00e73355981358",
+    "LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  }
+}
