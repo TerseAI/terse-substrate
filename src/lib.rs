@@ -7,3 +7,13 @@ mod generated {
 }
 
 pub use generated::*;
+
+mod client;
+mod credentials;
+mod routing;
+mod snapshot;
+
+pub use client::{Client, ConnectionOptions, Readiness};
+pub use credentials::{Credentials, FileCredentials};
+pub use routing::{TARGET_ACTOR_HEADER, target_actor_header, valid_resource_name};
+pub use snapshot::{golden_tag, validate_tag};
