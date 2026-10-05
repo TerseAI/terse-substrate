@@ -206,6 +206,25 @@ where
         }
     }
 
+    pub async fn list_workers(&self) -> Result<Vec<Worker>> {
+        let mut workers = Vec::new();
+        let mut page_token = String::new();
+        loop {
+            let request = self
+                .request(ListWorkersRequest {
+                    page_size: 1000,
+                    page_token,
+                })
+                .await?;
+            let page = self.inner.clone().list_workers(request).await?.into_inner();
+            workers.extend(page.workers);
+            page_token = page.next_page_token;
+            if page_token.is_empty() {
+                return Ok(workers);
+            }
+        }
+    }
+
     pub async fn wait_template(&self, target: ObjectRef) -> Result<ActorTemplate> {
         tokio::time::timeout(self.readiness.timeout, async {
             loop {
